@@ -1,0 +1,26 @@
+{
+  "name": "mfdoc",
+  "version": "1.0.0",
+  "main": "dist/doc.cjs.js",
+  "module": "dist/doc.esm.js",
+  "browser": "dist/doc.umd.js",
+  "dependencies": {
+    "rollup-plugin-uglify": "^6.0.4"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^5.0.2",
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-node-resolve": "^7.1.3",
+    "jest": "^26.0.1",
+    "rollup": "^1.29.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "jest --runInBand",
+    "pretest": "npm run build"
+  },
+  "files": [
+    "dist"
+  ]
+}
