@@ -4,7 +4,6 @@ export default class Aoo{
 constructor(aoo=[]){
 this.debugMode = true;
 this.debugIdCounter = 1;//first is cornorstone
-this.idMode = "numbers"; //"string"
 this.aoo = aoo;    //the aoo = an array not an object
 }
 ///just check
@@ -13,6 +12,7 @@ if(typeof incomming.id == "undefined" ){
 incomming.id = this.newId();
 }  
 this.aoo.push(incomming);
+return incomming;
 }
 indexToId(index){
 let item = this.aoo[index];
@@ -42,12 +42,12 @@ isLast(id){
 if(this.aoo[this.aoo.length-1].id==id){return true;}
 else {return false;}
 }//getItem
-search(value,prop="id"){
-let final =false;    
-this.aoo.forEach(e => {
-    if(e[prop]==value){final =  e;}
-});
-return final;
+/**Just send back the first one  */
+search(prop="id",value=""){
+for (let idx = 0; idx < this.aoo.length; idx++) {
+  if(this.aoo[idx][prop]==value){return  this.aoo[idx];}
+}  
+return false;
 }//
 searchAll(prop="id",value=0){
 let final =[];    
