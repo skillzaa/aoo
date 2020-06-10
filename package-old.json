@@ -5,7 +5,6 @@
   "module": "dist/doc.esm.js",
   "browser": "dist/doc.umd.js",
   "dependencies": {
-    "chalk": "^4.1.0",
     "rollup-plugin-uglify": "^6.0.4"
   },
   "devDependencies": {
@@ -16,8 +15,8 @@
     "rollup": "^1.29.0"
   },
   "scripts": {
-    "dev": "parcel src/Aoo.js",
-    "build": "parcel build  src/Aoo.js --no-minify --target browser",
+        "build": "rollup -c",
+    "dev": "rollup -c -w",
     "test": "jest --runInBand",
     "pretest": "npm run build"
   },
