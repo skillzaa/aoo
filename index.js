@@ -4,12 +4,19 @@ const aoo = new Aoo();//dont use{}
 aoo.addNew();
 aoo.addNew();
 aoo.addNew();
-
-
-    aoo.setValueAll("title", "newTitle");
-    const item = aoo.search("title", "newTitle");
-console.log('item :>> ', item);
-    
-    
+aoo.addNew();
+aoo.addNew();
+aoo.addNew();
+aoo.addNew();
+aoo.addNew();
+aoo.addNew();
+aoo.addNew();//no more add new--total 10
 //.............................................
-console.log('aoo :>> ', aoo);
+const getFirst = aoo.getFirst();
+console.log('isfirst :>> ', getFirst);
+console.log('isfirst :>> ', getFirst.id);
+
+const last = aoo.getLast();
+
+console.log('isLast :>> ', last);
+console.log('isLast :>> ', last.id);
