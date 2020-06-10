@@ -196,7 +196,7 @@ test('arrayLength3 = 8', () => {expect(arrayLength3).toBe(8)});  //---3 elements
 const objTwo = aoo.find(2);
 aoo.delete(objTwo); //del by obj
 const arrayLength4  = aoo.length;
-test('arrayLength4 = 8', () => {expect(arrayLength4).toBe(7)})
+test('arrayLength4=8', () => {expect(arrayLength4).toBe(7)});
 
 });
 //console.log('aoo.aoo :>> ', aoo.aoo);

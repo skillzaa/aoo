@@ -110,20 +110,6 @@ if(index > this.aoo.length-1){
   return this.aoo[index];
 } 
 }//getItem
-// sortBySortOrder(){
-// let sorted=    this.aoo.sort((a, b)=> {
-//     const bandA = this.h.isSet(a.sortOrder,0)
-//     const bandB = this.h.isSet(b.sortOrder,0)
-//         let comparison = 0;
-//         if (bandA > bandB) {
-//           comparison = 1;
-//         } else if (bandA < bandB) {
-//           comparison = -1;
-//         }
-//         return comparison;
-//       });
-// return sorted;      
-// }//sortBySortOrder
 sort(overWrite = false,order="ASC"){
 let sorted=    this.aoo.sort((a, b)=> {
     const bandA = a.sortOrder || 0;
@@ -223,8 +209,3 @@ uuid() {
   });
 }
 }//class ends    
-
-/** the is no findParent function since findParent  = 
- * find(parentId)
- * 
- */
